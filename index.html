@@ -1,216 +1,717 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inevitable Technologies - Modernized</title>
 
-<html>
-	<head>
-		<title>Inevitable Technologies</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<link rel="shortcut icon" type="image/jpg" href="images/logo.jpg"/>
-		<script>
-			!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-			posthog.init('phc_xqi3hKL2HQf6F3XAGcqOAhTrb6tsPfFkRmJcVe4xXVM',{api_host:'https://eu.posthog.com'})
-		</script>
-	</head>
-	<body>
+    <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg" onerror="this.href='https://placehold.co/32x32/1a1a1a/ffffff?text=IT'">
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who we are</a></li>
-							<li><a href="#two">What we do</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Inevitable Technologies</h1>
-							<p>Client-Centric <br />
-								Results-Oriented</p>
-							<small>Innovation Unleashed <br></small> <br>
-							<ul class="actions">
-								<li><a href="#three" class="button scrolly">Contact us</a></li>
-							</ul>
-						</div>
-					</section>
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_xqi3hKL2HQf6F3XAGcqOAhTrb6tsPfFkRmJcVe4xXVM',{api_host:'https://eu.posthog.com'})
+    </script>
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/logo.jpg" alt="Inevitable Technologies" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>About Inevitable Technologies</h2>
-									<p>At Inevitable Technologies, we are a visionary and dedicated team committed to innovation and sustainability. Our mission is to develop cutting-edge technologies that make a positive impact on the world, driving progress for future generations.</p>
-									<ul class="actions">
-										<li><a href="#two" class="button">LEARN MORE</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/dev.jpg" alt="Inevitable Tech Software Development" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2> What we do @ Inevitable Tech?</h2>
-									<p>At Inevitable Tech, we equip SMEs with the hardware and software solutions they need to thrive. Our tailored approach boosts efficiency, drives growth, and helps businesses stay competitive in an ever-changing market.</p>
-									<ul class="actions">
-										<li><a href="#two" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/Inevitable_Tech.jpeg" alt="Website development Inevitable Tech" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Where Ideas Become Reality</h2>
-									<p>At Inevitable Technologies, we're constantly pushing the boundaries of what's possible. Our team of passionate innovators thrives on turning bold concepts into groundbreaking solutions that shape the future.</p>
-									<ul class="actions">
-										<li><a href="https://thato.nwamadi.com" target="_blank" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+    <style>
+        /* CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What we do</h2>
-							<p>We specialise in the management and creation of innovative IT solutions to help you scale faster.</p>
-							<div class="features">
-								<section>
-									<span class="icon major fa-code"></span>
-									<h3>Custom Software Development</h3>
-									<p>Our talented developers leverage cutting-edge technologies to create bespoke software solutions that fuel your business's success.</p>
-								</section>
-								<section>
-									<span class="icon major fa-lock"></span>
-									<h3>Robust Security</h3>
-									<p>We prioritize data protection, implementing stringent security measures and best practices to safeguard your sensitive information.</p>
-								</section>
-								<section>
-									<span class="icon major fa-cog"></span>
-									<h3>Intuitive User Experience</h3>
-									<p>We design user-friendly interfaces that streamline workflows, enhance productivity, and deliver a seamless experience for your team and customers.</p>
-								</section>
-								<section>
-									<span class="icon major fa-desktop"></span>
-									<h3>Cross-Platform Compatibility</h3>
-									<p>Our solutions work seamlessly across all major platforms, including Android, iOS, and Windows, ensuring maximum reach and accessibility.</p>
-								</section>
-								<section>
-									<span class="icon major fa-chain"></span>
-									<h3>Scalable & Future-Proof</h3>
-									<p>We build scalable systems that adapt to your evolving needs, ensuring your technology investments support long-term growth.</p>
-								</section>
-								<section>
-									<span class="icon major fa-diamond"></span>
-									<h3>Uncompromising Quality</h3>
-									<p>We're committed to delivering exceptional quality and performance, ensuring your systems operate at optimal speed and efficiency.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="#three" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+        /* CSS Variables (Dark Theme Default) */
+        :root {
+            --bg-color: #1a1a1a; /* Dark background */
+            --text-color: #e0e0e0; /* Light text */
+            --primary-color: #007bff; /* Accent color (e.g., blue) */
+            --secondary-color: #6c757d; /* Muted color */
+            --card-bg: #2a2a2a; /* Slightly lighter dark for cards/sections */
+            --border-color: #444;
+            --link-color: #4dabf7; /* Light blue for links */
+            --link-hover-color: #1e90ff;
+            --heading-font: 'Poppins', sans-serif;
+            --body-font: 'Poppins', sans-serif;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --icon-color: var(--primary-color);
+        }
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>We would love to hear from you! .</p>
-							<div class="split style1">
-								<section>
-									<form action="https://formspree.io/f/xdoyandy" method="post" target="_blank">
-										<div class="field half first">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="5"></textarea>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>Western Cape<br />
-											Cape Town, 7925<br />
-											South Africa</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="mailto:hello@inevitabletech.co.za">hello@inevitabletech.co.za</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(069) 471-4292</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+        /* Light Theme Variables */
+        body[data-theme="light"] {
+            --bg-color: #f8f9fa; /* Light background */
+            --text-color: #212529; /* Dark text */
+            --primary-color: #0056b3; /* Darker blue for light mode */
+            --secondary-color: #6c757d;
+            --card-bg: #ffffff; /* White cards */
+            --border-color: #dee2e6;
+            --link-color: #0056b3;
+            --link-hover-color: #003d80;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --icon-color: var(--primary-color);
+        }
 
-			</div>
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+            font-size: 16px; /* Base font size */
+        }
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy;  All rights reserved.</li><li>Design: <a href="https://www.inevitabletech.co.za/" target="_blank">Inevitable Technologies</a></li> <li>BEE: <a href="businessinsa.com/bee/" target="_blank">Level 1 Certified</a></li>
-					</ul>
-				</div>
-			</footer>
+        body {
+            font-family: var(--body-font);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px; /* Rounded corners for images */
+        }
 
-	</body>
-	<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	-->
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover-color);
+            text-decoration: underline;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            margin-bottom: 0.75em;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 90%;
+            max-width: 1140px; /* Max width for content */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-family: var(--body-font);
+            font-size: 1rem;
+        }
+
+        .button:hover {
+            background-color: var(--link-hover-color);
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        .button.secondary {
+            background-color: var(--secondary-color);
+        }
+        .button.secondary:hover {
+            background-color: #5a6268;
+        }
+
+        /* Header & Navigation */
+        .site-header {
+            padding: 1rem 0;
+            background-color: var(--card-bg); /* Header background slightly different */
+            border-bottom: 1px solid var(--border-color);
+            position: sticky; /* Sticky header */
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+         .logo img {
+            height: 40px; /* Adjust logo height */
+            width: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem; /* Spacing between nav items */
+        }
+
+        .main-nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+        }
+        .main-nav a::after { /* Underline effect on hover/active */
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after,
+        .main-nav a.active::after { /* Add 'active' class via JS if needed */
+             width: 100%;
+        }
+
+        .theme-toggle-button {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.9rem;
+        }
+        .theme-toggle-button:hover {
+            background-color: var(--border-color);
+        }
+        .theme-toggle-button .fa-sun { display: none; } /* Hide sun by default */
+        body[data-theme="light"] .theme-toggle-button .fa-moon { display: none; } /* Hide moon in light */
+        body[data-theme="light"] .theme-toggle-button .fa-sun { display: inline-block; } /* Show sun in light */
+
+        /* Main Content Area */
+        main {
+            flex-grow: 1; /* Ensure footer stays at bottom */
+        }
+
+        /* Sections General Styling */
+        .wrapper {
+            padding: 4rem 0; /* Generous padding */
+        }
+
+        .wrapper:nth-child(odd) { /* Alternate background for visual separation */
+             background-color: var(--card-bg);
+        }
+
+        .inner {
+            max-width: 960px; /* Slightly narrower content for readability */
+            margin: 0 auto;
+        }
+
+        /* Intro Section */
+        #intro {
+            min-height: 70vh; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: transparent; /* Use body background */
+            padding-top: 8rem; /* Add padding to avoid overlap with sticky header */
+            padding-bottom: 4rem;
+        }
+        #intro h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5em;
+            color: var(--primary-color); /* Highlight main heading */
+        }
+        #intro p {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5em;
+        }
+        #intro small {
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 2em;
+        }
+
+        /* Section One (Who We Are - Spotlights) */
+        #one .spotlight {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem; /* Space between image and text */
+            background-color: var(--bg-color); /* Ensure contrast if section bg is card-bg */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            border: 1px solid var(--border-color);
+        }
+        #one .spotlight:nth-child(even) {
+            flex-direction: row-reverse; /* Alternate layout */
+        }
+        #one .spotlight .image {
+            flex: 1 1 300px; /* Flex properties for image container */
+        }
+        #one .spotlight .content {
+            flex: 2 1 400px; /* Flex properties for text content */
+        }
+        #one .spotlight h2 {
+            margin-bottom: 0.5em;
+        }
+        #one .spotlight .actions {
+            margin-top: 1.5em;
+        }
+
+        /* Section Two (What We Do - Features) */
+        #two .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        #two .feature-item {
+            background-color: var(--bg-color); /* Contrast background */
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #two .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px var(--shadow-color);
+        }
+        #two .feature-item .icon {
+            font-size: 3rem; /* Larger icons */
+            color: var(--icon-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        #two .feature-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75em;
+        }
+        #two .actions {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        /* Section Three (Get in Touch) */
+        #three .split {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem; /* Space between form and contact info */
+            margin-top: 3rem;
+        }
+        #three .split > * { /* Target direct children (form section, contact section) */
+            flex: 1; /* Each takes half the space */
+            min-width: 300px; /* Minimum width before wrapping */
+        }
+        #three form .field {
+            margin-bottom: 1.5rem;
+        }
+        #three form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        #three form input[type="text"],
+        #three form input[type="email"],
+        #three form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: var(--bg-color); /* Match input background */
+            color: var(--text-color);
+            font-family: var(--body-font);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        #three form input[type="text"]:focus,
+        #three form input[type="email"]:focus,
+        #three form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        #three form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        #three form .actions {
+            margin-top: 1.5rem;
+        }
+
+        #three .contact ul {
+            list-style: none;
+            padding: 0;
+        }
+        #three .contact li {
+            margin-bottom: 1.5rem;
+        }
+        #three .contact h3 {
+            margin-bottom: 0.5em;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+        #three .contact span, #three .contact a {
+            color: var(--secondary-color); /* Muted text for details */
+        }
+        body[data-theme="light"] #three .contact span,
+        body[data-theme="light"] #three .contact a {
+             color: #555; /* Slightly darker secondary text for light mode */
+        }
+        #three .contact a {
+            color: var(--link-color); /* Ensure email link uses link color */
+            text-decoration: none;
+        }
+        #three .contact a:hover {
+            text-decoration: underline;
+        }
+        #three .contact .icons {
+            display: flex;
+            gap: 1rem; /* Space between social icons */
+            margin-top: 0.5em;
+        }
+        #three .contact .icons a {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+        #three .contact .icons a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 2rem 0;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            margin-top: auto; /* Push footer to bottom */
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+        .site-footer .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .site-footer .menu li {
+             display: inline-block; /* Keep items inline */
+        }
+        .site-footer .menu a {
+            color: var(--secondary-color);
+        }
+        .site-footer .menu a:hover {
+            color: var(--link-color);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            h3 { font-size: 1.3rem; }
+
+            .container { width: 95%; }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .main-nav ul {
+                flex-direction: column; /* Stack nav items */
+                align-items: center;
+                gap: 1rem;
+            }
+
+            #intro { padding-top: 10rem; min-height: 50vh; } /* Adjust padding for stacked header */
+            #intro h1 { font-size: 2.5rem; }
+
+            #one .spotlight,
+            #one .spotlight:nth-child(even) {
+                flex-direction: column; /* Stack image and text vertically */
+                text-align: center;
+            }
+            #one .spotlight .image { margin-bottom: 1.5rem; }
+
+            #three .split { flex-direction: column; } /* Stack form and contact info */
+        }
+
+    </style>
+</head>
+<body data-theme="dark"> <header class="site-header">
+        <div class="container header-container">
+            <a href="#intro" class="logo">
+                 <img src="images/logo.jpg" alt="Inevitable Technologies Logo" onerror="this.style.display='none'; this.nextSibling.textContent='Inevitable Technologies';">
+                <span>Inevitable Technologies</span> </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#intro">Welcome</a></li>
+                    <li><a href="#one">Who We Are</a></li>
+                    <li><a href="#two">What We Do</a></li>
+                    <li><a href="#three">Get In Touch</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle-button" title="Toggle theme">
+                <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>  <span class="sr-only">Toggle Theme</span> </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="intro" class="wrapper fullscreen">
+            <div class="inner">
+                <h1>Inevitable Technologies</h1>
+                <p>Client-Centric <br /> Results-Oriented</p>
+                <small>Innovation Unleashed</small>
+                <ul class="actions" style="list-style: none; padding: 0;">
+                    <li><a href="#three" class="button">Contact Us</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="one" class="wrapper">
+            <div class="container">
+                 <h2 class="text-center" style="margin-bottom: 3rem;">Who We Are</h2>
+                 <div class="spotlight">
+                    <div class="image">
+                        <img src="images/logo.jpg" alt="Inevitable Technologies Company" onerror="this.src='https://placehold.co/600x400/2a2a2a/e0e0e0?text=About+Us'" />
+                    </div>
+                    <div class="content">
+                        <h3>About Inevitable Technologies</h3>
+                        <p>At Inevitable Technologies, we are a visionary and dedicated team committed to innovation and sustainability. Our mission is to develop cutting-edge technologies that make a positive impact on the world, driving progress for future generations.</p>
+                        <ul class="actions" style="list-style: none; padding: 0;">
+                            <li><a href="#two" class="button secondary">Learn More Below</a></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="spotlight">
+                     <div class="image">
+                        <img src="images/dev.jpg" alt="Software Development Services" onerror="this.src='https://placehold.co/600x400/2a2a2a/e0e0e0?text=Our+Work'" />
+                    </div>
+                    <div class="content">
+                         <h3>What we do @ Inevitable Tech?</h3>
+                         <p>At Inevitable Tech, we equip SMEs with the hardware and software solutions they need to thrive. Our tailored approach boosts efficiency, drives growth, and helps businesses stay competitive in an ever-changing market.</p>
+                        <ul class="actions" style="list-style: none; padding: 0;">
+                            <li><a href="#two" class="button secondary">See Our Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="spotlight">
+                     <div class="image">
+                        <img src="images/Inevitable_Tech.jpeg" alt="Innovation at Inevitable Tech" onerror="this.src='https://placehold.co/600x400/2a2a2a/e0e0e0?text=Innovation'" />
+                    </div>
+                    <div class="content">
+                        <h3>Where Ideas Become Reality</h3>
+                        <p>At Inevitable Technologies, we're constantly pushing the boundaries of what's possible. Our team of passionate innovators thrives on turning bold concepts into groundbreaking solutions that shape the future.</p>
+                         </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="two" class="wrapper">
+            <div class="container inner">
+                <h2 class="text-center">What We Do</h2>
+                <p class="text-center">We specialise in the management and creation of innovative IT solutions to help you scale faster.</p>
+                <div class="features">
+                    <div class="feature-item">
+                        <span class="icon"><i class="fas fa-code"></i></span>
+                        <h3>Custom Software Development</h3>
+                        <p>Our talented developers leverage cutting-edge technologies to create bespoke software solutions that fuel your business's success.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon"><i class="fas fa-lock"></i></span>
+                        <h3>Robust Security</h3>
+                        <p>We prioritize data protection, implementing stringent security measures and best practices to safeguard your sensitive information.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon"><i class="fas fa-cogs"></i></span> <h3>Intuitive User Experience</h3>
+                        <p>We design user-friendly interfaces that streamline workflows, enhance productivity, and deliver a seamless experience.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <h3>Cross-Platform Compatibility</h3>
+                        <p>Our solutions work seamlessly across major platforms, including web, mobile (Android, iOS), and desktop, ensuring maximum reach.</p>
+                    </div>
+                    <div class="feature-item">
+                         <span class="icon"><i class="fas fa-expand-alt"></i></span> <h3>Scalable & Future-Proof</h3>
+                        <p>We build scalable systems that adapt to your evolving needs, ensuring your technology investments support long-term growth.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon"><i class="fas fa-gem"></i></span> <h3>Uncompromising Quality</h3>
+                        <p>We're committed to delivering exceptional quality and performance, ensuring your systems operate at optimal speed and efficiency.</p>
+                    </div>
+                </div>
+                <ul class="actions" style="list-style: none; padding: 0;">
+                    <li><a href="#three" class="button">Get a Quote</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="three" class="wrapper">
+            <div class="container inner">
+                <h2 class="text-center">Get In Touch</h2>
+                <p class="text-center">We would love to hear from you! Let's discuss how we can help your business grow.</p>
+                <div class="split">
+                    <section>
+                        <h3>Send Us a Message</h3>
+                        <form action="https://formspree.io/f/xdoyandy" method="post" target="_blank">
+                            <div class="field">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" required />
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="5" required></textarea>
+                            </div>
+                            <ul class="actions" style="list-style: none; padding: 0;">
+                                <li><button type="submit" class="button">Send Message</button></li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section>
+                        <h3>Contact Information</h3>
+                        <ul class="contact">
+                            <li>
+                                <h3><i class="fas fa-map-marker-alt icon-contact"></i> Address</h3>
+                                <span>Western Cape<br />
+                                Cape Town, 7925<br />
+                                South Africa</span>
+                            </li>
+                            <li>
+                                <h3><i class="fas fa-envelope icon-contact"></i> Email</h3>
+                                <a href="mailto:hello@inevitabletech.co.za">hello@inevitabletech.co.za</a>
+                            </li>
+                            <li>
+                                <h3><i class="fas fa-phone icon-contact"></i> Phone</h3>
+                                <span>(069) 471-4292</span>
+                            </li>
+                            <li>
+                                <h3><i class="fas fa-share-alt icon-contact"></i> Social</h3>
+                                <ul class="icons">
+                                     <li><a href="#" class="fa-twitter" aria-label="Twitter"><span class="label"></span></a></li>
+                                    <li><a href="#" class="fa-facebook" aria-label="Facebook"><span class="label"></span></a></li>
+                                    <li><a href="#" class="fa-github" aria-label="GitHub"><span class="label"></span></a></li>
+                                    <li><a href="#" class="fa-instagram" aria-label="Instagram"><span class="label"></span></a></li>
+                                    <li><a href="#" class="fa-linkedin" aria-label="LinkedIn"><span class="label"></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <ul class="menu">
+                <li>&copy; Inevitable Technologies. All rights reserved.</li>
+                <li>Design: Modernized by AI (Inspired by HTML5 UP & Mack Brands)</li>
+                <li><a href="https://businessinsa.com/bee/" target="_blank" rel="noopener noreferrer">BEE Level 1 Certified</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+        const bodyElement = document.body;
+
+        // Apply saved theme on load
+        if (currentTheme) {
+            bodyElement.setAttribute('data-theme', currentTheme);
+        } else {
+             // Default to dark if no preference saved
+             bodyElement.setAttribute('data-theme', 'dark');
+        }
+
+        // Toggle theme on button click
+        themeToggleButton.addEventListener('click', () => {
+            let newTheme = bodyElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            bodyElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme); // Save preference
+        });
+
+         // Optional: Add active class to nav link based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        const navLi = document.querySelectorAll('.main-nav ul li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                // Adjust offset based on header height if needed
+                const sectionHeight = section.clientHeight;
+                 // Use pageYOffset for broader compatibility
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                     current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.classList.add('active');
+                }
+            });
+             // Special case for intro/top
+             if (pageYOffset < sections[0].offsetTop) {
+                 navLi.forEach(a => a.classList.remove('active'));
+                 const introLink = document.querySelector('.main-nav ul li a[href="#intro"]');
+                 if(introLink) introLink.classList.add('active');
+             }
+        });
+
+    </script>
+
+</body>
 </html>
