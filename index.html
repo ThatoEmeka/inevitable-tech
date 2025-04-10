@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inevitable Technologies - Modernized</title>
+    <title>Inevitable Technologies</title>
 
     <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg" onerror="this.href='https://placehold.co/32x32/1a1a1a/ffffff?text=IT'">
-
+	<link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -18,476 +18,15 @@
         posthog.init('phc_xqi3hKL2HQf6F3XAGcqOAhTrb6tsPfFkRmJcVe4xXVM',{api_host:'https://eu.posthog.com'})
     </script>
 
-    <style>
-        /* CSS Reset */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* CSS Variables (Dark Theme Default) */
-        :root {
-            --bg-color: #1a1a1a; /* Dark background */
-            --text-color: #e0e0e0; /* Light text */
-            --primary-color: #007bff; /* Accent color (e.g., blue) */
-            --secondary-color: #6c757d; /* Muted color */
-            --card-bg: #2a2a2a; /* Slightly lighter dark for cards/sections */
-            --border-color: #444;
-            --link-color: #4dabf7; /* Light blue for links */
-            --link-hover-color: #1e90ff;
-            --heading-font: 'Poppins', sans-serif;
-            --body-font: 'Poppins', sans-serif;
-            --shadow-color: rgba(0, 0, 0, 0.3);
-            --icon-color: var(--primary-color);
-        }
-
-        /* Light Theme Variables */
-        body[data-theme="light"] {
-            --bg-color: #f8f9fa; /* Light background */
-            --text-color: #212529; /* Dark text */
-            --primary-color: #0056b3; /* Darker blue for light mode */
-            --secondary-color: #6c757d;
-            --card-bg: #ffffff; /* White cards */
-            --border-color: #dee2e6;
-            --link-color: #0056b3;
-            --link-hover-color: #003d80;
-            --shadow-color: rgba(0, 0, 0, 0.1);
-            --icon-color: var(--primary-color);
-        }
-
-        html {
-            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-            font-size: 16px; /* Base font size */
-        }
-
-        body {
-            font-family: var(--body-font);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px; /* Rounded corners for images */
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        a:hover {
-            color: var(--link-hover-color);
-            text-decoration: underline;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--heading-font);
-            margin-bottom: 0.75em;
-            line-height: 1.3;
-            font-weight: 600;
-        }
-
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
-        h3 { font-size: 1.5rem; }
-
-        p {
-            margin-bottom: 1em;
-        }
-
-        /* Utility Classes */
-        .container {
-            width: 90%;
-            max-width: 1140px; /* Max width for content */
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: var(--primary-color);
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            font-family: var(--body-font);
-            font-size: 1rem;
-        }
-
-        .button:hover {
-            background-color: var(--link-hover-color);
-            color: #fff;
-            text-decoration: none;
-            transform: translateY(-2px); /* Slight lift effect */
-        }
-
-        .button.secondary {
-            background-color: var(--secondary-color);
-        }
-        .button.secondary:hover {
-            background-color: #5a6268;
-        }
-
-        /* Header & Navigation */
-        .site-header {
-            padding: 1rem 0;
-            background-color: var(--card-bg); /* Header background slightly different */
-            border-bottom: 1px solid var(--border-color);
-            position: sticky; /* Sticky header */
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px var(--shadow-color);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-         .logo img {
-            height: 40px; /* Adjust logo height */
-            width: auto;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
-        .main-nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem; /* Spacing between nav items */
-        }
-
-        .main-nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 5px 0;
-            position: relative;
-        }
-        .main-nav a::after { /* Underline effect on hover/active */
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--primary-color);
-            transition: width 0.3s ease;
-        }
-        .main-nav a:hover::after,
-        .main-nav a.active::after { /* Add 'active' class via JS if needed */
-             width: 100%;
-        }
-
-        .theme-toggle-button {
-            background: none;
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, border-color 0.3s;
-            font-size: 0.9rem;
-        }
-        .theme-toggle-button:hover {
-            background-color: var(--border-color);
-        }
-        .theme-toggle-button .fa-sun { display: none; } /* Hide sun by default */
-        body[data-theme="light"] .theme-toggle-button .fa-moon { display: none; } /* Hide moon in light */
-        body[data-theme="light"] .theme-toggle-button .fa-sun { display: inline-block; } /* Show sun in light */
-
-        /* Main Content Area */
-        main {
-            flex-grow: 1; /* Ensure footer stays at bottom */
-        }
-
-        /* Sections General Styling */
-        .wrapper {
-            padding: 4rem 0; /* Generous padding */
-        }
-
-        .wrapper:nth-child(odd) { /* Alternate background for visual separation */
-             background-color: var(--card-bg);
-        }
-
-        .inner {
-            max-width: 960px; /* Slightly narrower content for readability */
-            margin: 0 auto;
-        }
-
-        /* Intro Section */
-        #intro {
-            min-height: 70vh; /* Adjust height as needed */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background-color: transparent; /* Use body background */
-            padding-top: 8rem; /* Add padding to avoid overlap with sticky header */
-            padding-bottom: 4rem;
-        }
-        #intro h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5em;
-            color: var(--primary-color); /* Highlight main heading */
-        }
-        #intro p {
-            font-size: 1.2rem;
-            color: var(--secondary-color);
-            margin-bottom: 1.5em;
-        }
-        #intro small {
-            font-size: 1rem;
-            display: block;
-            margin-bottom: 2em;
-        }
-
-        /* Section One (Who We Are - Spotlights) */
-        #one .spotlight {
-            display: flex;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            align-items: center;
-            margin-bottom: 3rem;
-            gap: 2rem; /* Space between image and text */
-            background-color: var(--bg-color); /* Ensure contrast if section bg is card-bg */
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px var(--shadow-color);
-            border: 1px solid var(--border-color);
-        }
-        #one .spotlight:nth-child(even) {
-            flex-direction: row-reverse; /* Alternate layout */
-        }
-        #one .spotlight .image {
-            flex: 1 1 300px; /* Flex properties for image container */
-        }
-        #one .spotlight .content {
-            flex: 2 1 400px; /* Flex properties for text content */
-        }
-        #one .spotlight h2 {
-            margin-bottom: 0.5em;
-        }
-        #one .spotlight .actions {
-            margin-top: 1.5em;
-        }
-
-        /* Section Two (What We Do - Features) */
-        #two .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        #two .feature-item {
-            background-color: var(--bg-color); /* Contrast background */
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 10px var(--shadow-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        #two .feature-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px var(--shadow-color);
-        }
-        #two .feature-item .icon {
-            font-size: 3rem; /* Larger icons */
-            color: var(--icon-color);
-            margin-bottom: 1rem;
-            display: block;
-        }
-        #two .feature-item h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75em;
-        }
-        #two .actions {
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        /* Section Three (Get in Touch) */
-        #three .split {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem; /* Space between form and contact info */
-            margin-top: 3rem;
-        }
-        #three .split > * { /* Target direct children (form section, contact section) */
-            flex: 1; /* Each takes half the space */
-            min-width: 300px; /* Minimum width before wrapping */
-        }
-        #three form .field {
-            margin-bottom: 1.5rem;
-        }
-        #three form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        #three form input[type="text"],
-        #three form input[type="email"],
-        #three form textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-            background-color: var(--bg-color); /* Match input background */
-            color: var(--text-color);
-            font-family: var(--body-font);
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-        #three form input[type="text"]:focus,
-        #three form input[type="email"]:focus,
-        #three form textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-        #three form textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        #three form .actions {
-            margin-top: 1.5rem;
-        }
-
-        #three .contact ul {
-            list-style: none;
-            padding: 0;
-        }
-        #three .contact li {
-            margin-bottom: 1.5rem;
-        }
-        #three .contact h3 {
-            margin-bottom: 0.5em;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-        }
-        #three .contact span, #three .contact a {
-            color: var(--secondary-color); /* Muted text for details */
-        }
-        body[data-theme="light"] #three .contact span,
-        body[data-theme="light"] #three .contact a {
-             color: #555; /* Slightly darker secondary text for light mode */
-        }
-        #three .contact a {
-            color: var(--link-color); /* Ensure email link uses link color */
-            text-decoration: none;
-        }
-        #three .contact a:hover {
-            text-decoration: underline;
-        }
-        #three .contact .icons {
-            display: flex;
-            gap: 1rem; /* Space between social icons */
-            margin-top: 0.5em;
-        }
-        #three .contact .icons a {
-            font-size: 1.5rem;
-            color: var(--secondary-color);
-            transition: color 0.3s ease;
-        }
-        #three .contact .icons a:hover {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* Footer */
-        .site-footer {
-            padding: 2rem 0;
-            background-color: var(--card-bg);
-            border-top: 1px solid var(--border-color);
-            margin-top: auto; /* Push footer to bottom */
-            text-align: center;
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-        }
-        .site-footer .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .site-footer .menu li {
-             display: inline-block; /* Keep items inline */
-        }
-        .site-footer .menu a {
-            color: var(--secondary-color);
-        }
-        .site-footer .menu a:hover {
-            color: var(--link-color);
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.75rem; }
-            h3 { font-size: 1.3rem; }
-
-            .container { width: 95%; }
-
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .main-nav ul {
-                flex-direction: column; /* Stack nav items */
-                align-items: center;
-                gap: 1rem;
-            }
-
-            #intro { padding-top: 10rem; min-height: 50vh; } /* Adjust padding for stacked header */
-            #intro h1 { font-size: 2.5rem; }
-
-            #one .spotlight,
-            #one .spotlight:nth-child(even) {
-                flex-direction: column; /* Stack image and text vertically */
-                text-align: center;
-            }
-            #one .spotlight .image { margin-bottom: 1.5rem; }
-
-            #three .split { flex-direction: column; } /* Stack form and contact info */
-        }
-
-    </style>
 </head>
-<body data-theme="dark"> <header class="site-header">
+<body data-theme="dark"> 
+	<header class="site-header">
         <div class="container header-container">
             <a href="#intro" class="logo">
-                 <img src="images/logo.jpg" alt="Inevitable Technologies Logo" onerror="this.style.display='none'; this.nextSibling.textContent='Inevitable Technologies';">
-                <span>Inevitable Technologies</span> </a>
-            <nav class="main-nav">
+                 <img src="images/logo.jpg" alt="Inevitable Technologies Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                 <span style="display: none;">Inevitable Technologies</span> </a>
+
+            <nav class="main-nav" id="main-navigation">
                 <ul>
                     <li><a href="#intro">Welcome</a></li>
                     <li><a href="#one">Who We Are</a></li>
@@ -495,8 +34,19 @@
                     <li><a href="#three">Get In Touch</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="theme-toggle-button" title="Toggle theme">
-                <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>  <span class="sr-only">Toggle Theme</span> </button>
+
+            <div class="header-actions">
+                 <button id="menu-toggle" class="menu-toggle-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="main-navigation">
+                     <span class="burger-line"></span>
+                     <span class="burger-line"></span>
+                     <span class="burger-line"></span>
+                 </button>
+
+                 <button id="theme-toggle" class="theme-toggle-button" title="Toggle theme">
+                     <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>
+                     <span class="sr-only">Toggle Theme</span>
+                 </button>
+            </div>
         </div>
     </header>
 
@@ -655,60 +205,159 @@
         <div class="container">
             <ul class="menu">
                 <li>&copy; Inevitable Technologies. All rights reserved.</li>
-                <li>Design: Modernized by AI (Inspired by HTML5 UP & Mack Brands)</li>
                 <li><a href="https://businessinsa.com/bee/" target="_blank" rel="noopener noreferrer">BEE Level 1 Certified</a></li>
             </ul>
         </div>
     </footer>
 
     <script>
+        // --- Theme Toggle Script ---
         const themeToggleButton = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme');
-        const bodyElement = document.body;
+        const bodyElement = document.body; // Define globally for use in multiple functions
 
         // Apply saved theme on load
+        const currentTheme = localStorage.getItem('theme');
         if (currentTheme) {
             bodyElement.setAttribute('data-theme', currentTheme);
         } else {
-             // Default to dark if no preference saved
-             bodyElement.setAttribute('data-theme', 'dark');
+            bodyElement.setAttribute('data-theme', 'dark'); // Default to dark
         }
 
-        // Toggle theme on button click
-        themeToggleButton.addEventListener('click', () => {
-            let newTheme = bodyElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            bodyElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme); // Save preference
-        });
+        // Add event listener only if the button exists
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', () => {
+                let newTheme = bodyElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                bodyElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme); // Save preference
+            });
+        } else {
+            console.error("Theme toggle button not found");
+        }
 
-         // Optional: Add active class to nav link based on scroll position
+        // --- Mobile Menu Toggle Script ---
+        const menuToggleButton = document.getElementById('menu-toggle');
+        const mainNav = document.getElementById('main-navigation');
+
+        // Add event listener only if both elements exist
+        if (menuToggleButton && mainNav) {
+            const navLinks = mainNav.querySelectorAll('a'); // Get all links in the nav
+
+            menuToggleButton.addEventListener('click', () => {
+                const isExpanded = menuToggleButton.getAttribute('aria-expanded') === 'true';
+                menuToggleButton.setAttribute('aria-expanded', !isExpanded);
+                menuToggleButton.classList.toggle('active'); // For burger animation
+                mainNav.classList.toggle('active');
+                bodyElement.classList.toggle('menu-open'); // Toggle body class for scroll lock
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Check if the menu is actually active (visible) before trying to close
+                    if (mainNav.classList.contains('active')) {
+                        menuToggleButton.setAttribute('aria-expanded', 'false');
+                        menuToggleButton.classList.remove('active');
+                        mainNav.classList.remove('active');
+                        bodyElement.classList.remove('menu-open');
+                    }
+                });
+            });
+
+        } else {
+             if (!menuToggleButton) console.error("Menu toggle button not found");
+             if (!mainNav) console.error("Main navigation element not found");
+        }
+
+
+        // --- Active Nav Link Highlighting on Scroll ---
         const sections = document.querySelectorAll('section[id]');
-        const navLi = document.querySelectorAll('.main-nav ul li a');
+        const navLiAnchors = document.querySelectorAll('.main-nav ul li a');
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                // Adjust offset based on header height if needed
-                const sectionHeight = section.clientHeight;
-                 // Use pageYOffset for broader compatibility
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                     current = section.getAttribute('id');
-                }
-            });
+        // Function to get computed style value
+        function getCssVariableValue(variableName) {
+            return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
+        }
 
-            navLi.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === `#${current}`) {
-                    a.classList.add('active');
+        // Ensure elements exist before adding scroll listener
+        if (sections.length > 0 && navLiAnchors.length > 0) {
+            window.addEventListener('scroll', () => {
+                let current = '';
+                // Get header height dynamically inside the event listener
+                const headerHeightString = getCssVariableValue('--header-height');
+                // Convert header height to a number (remove 'px')
+                const headerHeight = parseFloat(headerHeightString) || 60; // Default to 60 if conversion fails
+
+                // Offset slightly more than header height to ensure correct section is highlighted
+                const scrollOffset = (window.innerHeight / 3) > 150 ? (window.innerHeight / 3) : 150;
+
+                sections.forEach(section => {
+                    // Calculate section top considering the actual header height
+                    const sectionTop = section.offsetTop - headerHeight;
+                    // Use pageYOffset (or window.scrollY)
+                    if (window.pageYOffset >= (sectionTop - scrollOffset)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLiAnchors.forEach(a => {
+                    a.classList.remove('active');
+                    if (a.getAttribute('href') === `#${current}`) {
+                        a.classList.add('active');
+                    }
+                });
+
+                // Special case for intro/top
+                const firstSectionTop = sections[0].offsetTop - headerHeight;
+                if (window.pageYOffset < firstSectionTop - 50 ) { // Check if above the adjusted top of the first section
+                    navLiAnchors.forEach(a => a.classList.remove('active'));
+                    const introLink = document.querySelector('.main-nav ul li a[href="#intro"]');
+                    if (introLink) introLink.classList.add('active');
                 }
-            });
-             // Special case for intro/top
-             if (pageYOffset < sections[0].offsetTop) {
-                 navLi.forEach(a => a.classList.remove('active'));
+            }, { passive: true }); // Improve scroll performance
+
+        } else {
+            if (sections.length === 0) console.warn("No sections with IDs found for scroll spying.");
+            if (navLiAnchors.length === 0) console.warn("No navigation links found for scroll spying.");
+        }
+
+
+        // --- Image Fallback Refinement & Initial Active Link ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle logo image error
+            const logoImg = document.querySelector('.logo img');
+            if (logoImg) {
+                logoImg.onerror = function() {
+                    this.style.display = 'none';
+                    const fallbackText = this.nextElementSibling;
+                    if (fallbackText && fallbackText.tagName === 'SPAN') {
+                        fallbackText.style.display = 'inline';
+                    }
+                    console.warn('Logo image failed to load:', this.src);
+                };
+                if (logoImg.complete && logoImg.naturalWidth === 0) {
+                    logoImg.onerror();
+                }
+            }
+
+            // Set initial active link
+            const currentHash = window.location.hash;
+            let activeLinkFound = false;
+            if (currentHash && navLiAnchors.length > 0) {
+                 navLiAnchors.forEach(a => {
+                     if (a.getAttribute('href') === currentHash) {
+                         a.classList.add('active');
+                         activeLinkFound = true;
+                     } else {
+                         a.classList.remove('active');
+                     }
+                 });
+            }
+            // If no hash match or no hash, set Welcome link active by default
+            if (!activeLinkFound && navLiAnchors.length > 0) {
                  const introLink = document.querySelector('.main-nav ul li a[href="#intro"]');
-                 if(introLink) introLink.classList.add('active');
-             }
+                  navLiAnchors.forEach(a => a.classList.remove('active')); // Ensure others are inactive
+                 if (introLink) introLink.classList.add('active');
+            }
         });
 
     </script>

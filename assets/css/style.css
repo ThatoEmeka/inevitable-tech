@@ -1,0 +1,721 @@
+        /* CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* CSS Variables (Dark Theme Default) */
+        :root {
+            --bg-color: #1a1a1a; /* Dark background */
+            --text-color: #e0e0e0; /* Light text */
+            --primary-color: #007bff; /* Accent color (e.g., blue) */
+            --secondary-color: #6c757d; /* Muted color */
+            --card-bg: #2a2a2a; /* Slightly lighter dark for cards/sections */
+            --border-color: #444;
+            --link-color: #4dabf7; /* Light blue for links */
+            --link-hover-color: #1e90ff;
+            --heading-font: 'Poppins', sans-serif;
+            --body-font: 'Poppins', sans-serif;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --icon-color: var(--primary-color);
+            --header-height: 70px; /* Define header height variable */
+        }
+
+        /* Light Theme Variables */
+        body[data-theme="light"] {
+            --bg-color: #f8f9fa; /* Light background */
+            --text-color: #212529; /* Dark text */
+            --primary-color: #0056b3; /* Darker blue for light mode */
+            --secondary-color: #6c757d;
+            --card-bg: #ffffff; /* White cards */
+            --border-color: #dee2e6;
+            --link-color: #0056b3;
+            --link-hover-color: #003d80;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --icon-color: var(--primary-color);
+        }
+
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+            font-size: 16px; /* Base font size */
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Prevent background scroll when mobile menu is open */
+        body.menu-open {
+             overflow: hidden;
+        }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px; /* Rounded corners for images */
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover-color);
+            text-decoration: underline;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            margin-bottom: 0.75em;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 90%;
+            max-width: 1140px; /* Max width for content */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-family: var(--body-font);
+            font-size: 1rem;
+        }
+
+        .button:hover {
+            background-color: var(--link-hover-color);
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        .button.secondary {
+            background-color: var(--secondary-color);
+        }
+        .button.secondary:hover {
+            background-color: #5a6268;
+        }
+
+        /* Header & Navigation */
+        .site-header {
+            padding: 0.5rem 0; /* Reduced padding slightly */
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            min-height: var(--header-height); /* Ensure header has a minimum height */
+            display: flex; /* Use flex to align items vertically if needed */
+            align-items: center; /* Center items vertically */
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%; /* Ensure container takes full width */
+        }
+
+        .logo {
+            font-size: 1.3rem; /* Adjusted size */
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex; /* Align image and text */
+            align-items: center;
+            flex-shrink: 0; /* Prevent logo from shrinking */
+        }
+         .logo img {
+            height: 40px; /* Adjust logo height */
+            width: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+            border-radius: 4px; /* Slightly smaller radius */
+        }
+
+        /* Navigation Styles */
+        .main-nav {
+             /* Display normally on desktop */
+             margin: 0 1rem; /* Add space between logo and nav, nav and actions */
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem; /* Spacing between nav items */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .main-nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s ease;
+            white-space: nowrap; /* Prevent nav items wrapping */
+        }
+        .main-nav a::after { /* Underline effect on hover/active */
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px; /* Position underline slightly below */
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover,
+        .main-nav a:focus, /* Add focus style */
+        .main-nav a.active {
+            color: var(--primary-color); /* Highlight color on hover/active */
+        }
+
+        .main-nav a:hover::after,
+        .main-nav a:focus::after,
+        .main-nav a.active::after {
+             width: 100%;
+        }
+
+
+        /* Right side container for buttons */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* Add space between buttons inside this container */
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle-button {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 1rem; /* Adjusted size */
+            margin-left: 0; /* Removed specific margin, handled by parent gap */
+            line-height: 1; /* Prevent extra vertical space */
+            flex-shrink: 0; /* Prevent button from shrinking */
+        }
+        .theme-toggle-button:hover {
+            background-color: var(--border-color);
+        }
+        .theme-toggle-button .fa-sun { display: none; }
+        body[data-theme="light"] .theme-toggle-button .fa-moon { display: none; }
+        body[data-theme="light"] .theme-toggle-button .fa-sun { display: inline-block; }
+        .theme-toggle-button .sr-only { /* Screen reader only text */
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+
+        /* --- Burger Menu Button --- */
+        .menu-toggle-button {
+            display: none; /* Hidden by default on larger screens */
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem; /* Size of the icon */
+            cursor: pointer;
+            padding: 5px; /* Add some clickable area */
+            z-index: 1010; /* Ensure it's above the nav panel */
+            flex-shrink: 0; /* Prevent button from shrinking */
+        }
+
+        /* Burger Icon Lines */
+        .menu-toggle-button .burger-line {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 5px 0;
+            border-radius: 1px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        /* Animation for burger to X (when active) */
+        .menu-toggle-button.active .burger-line:nth-child(1) {
+             transform: translateY(8px) rotate(45deg);
+        }
+        .menu-toggle-button.active .burger-line:nth-child(2) {
+             opacity: 0;
+        }
+        .menu-toggle-button.active .burger-line:nth-child(3) {
+             transform: translateY(-8px) rotate(-45deg);
+        }
+
+
+        /* Main Content Area */
+        main {
+            flex-grow: 1; /* Ensure footer stays at bottom */
+            padding-top: var(--header-height); /* Add padding to prevent overlap with sticky header */
+        }
+
+        /* Sections General Styling */
+        .wrapper {
+            padding: 3rem 0; /* Adjusted padding */
+        }
+
+        .wrapper:nth-child(odd) { /* Alternate background for visual separation */
+             background-color: var(--card-bg);
+        }
+
+        .inner {
+            max-width: 960px; /* Slightly narrower content for readability */
+            margin: 0 auto;
+        }
+
+        /* Intro Section */
+        #intro {
+            min-height: calc(70vh - var(--header-height)); /* Adjust height considering header */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: transparent; /* Use body background */
+        }
+        #intro h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5em;
+            color: var(--primary-color); /* Highlight main heading */
+        }
+        #intro p {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5em;
+        }
+        #intro small {
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 2em;
+        }
+
+        /* Section One (Who We Are - Spotlights) */
+        #one .spotlight {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem; /* Space between image and text */
+            background-color: var(--bg-color); /* Ensure contrast if section bg is card-bg */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            overflow: hidden; /* Prevent content overflow issues */
+        }
+        #one .spotlight:nth-child(even) {
+            flex-direction: row-reverse; /* Alternate layout */
+        }
+        #one .spotlight .image {
+            flex: 1 1 300px; /* Flex properties for image container */
+            max-width: 100%; /* Ensure image doesn't overflow container */
+        }
+        #one .spotlight .content {
+            flex: 2 1 400px; /* Flex properties for text content */
+        }
+        #one .spotlight h2 {
+            margin-bottom: 0.5em;
+        }
+        #one .spotlight .actions {
+            margin-top: 1.5em;
+        }
+
+        /* Section Two (What We Do - Features) */
+        #two .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        #two .feature-item {
+            background-color: var(--bg-color); /* Contrast background */
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #two .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px var(--shadow-color);
+        }
+        #two .feature-item .icon {
+            font-size: 3rem; /* Larger icons */
+            color: var(--icon-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        #two .feature-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75em;
+        }
+        #two .actions { /* Added for Get a Quote button */
+             list-style: none;
+             padding: 0;
+             margin-top: 3rem;
+             text-align: center;
+        }
+
+
+        /* Section Three (Get in Touch) */
+        #three .split {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem; /* Space between form and contact info */
+            margin-top: 3rem;
+        }
+        #three .split > * { /* Target direct children (form section, contact section) */
+            flex: 1; /* Each takes half the space */
+            min-width: 300px; /* Minimum width before wrapping */
+        }
+        #three form .field {
+            margin-bottom: 1.5rem;
+        }
+        #three form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        #three form input[type="text"],
+        #three form input[type="email"],
+        #three form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: var(--bg-color); /* Match input background */
+            color: var(--text-color);
+            font-family: var(--body-font);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        #three form input[type="text"]:focus,
+        #three form input[type="email"]:focus,
+        #three form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2); /* Use RGB for primary color alpha */
+        }
+         body[data-theme="light"] #three form input[type="text"]:focus,
+         body[data-theme="light"] #three form input[type="email"]:focus,
+         body[data-theme="light"] #three form textarea:focus {
+            box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2); /* Darker blue alpha */
+         }
+
+        #three form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        #three form .actions {
+            margin-top: 1.5rem;
+             list-style: none; /* Ensure bullet points are removed */
+             padding: 0;
+        }
+
+        #three .contact ul {
+            list-style: none;
+            padding: 0;
+        }
+        #three .contact li {
+            margin-bottom: 1.5rem;
+            display: flex; /* Align icon and text */
+            align-items: flex-start; /* Align items to the top */
+            gap: 1rem; /* Space between icon and text block */
+        }
+        #three .contact h3 {
+            margin-bottom: 0.2em; /* Reduced margin */
+            font-size: 1.1rem; /* Slightly smaller heading */
+            color: var(--primary-color);
+             margin-top: 0; /* Remove default top margin */
+             line-height: 1.2; /* Adjust line height */
+        }
+        #three .contact .icon-contact {
+             font-size: 1.5rem; /* Consistent icon size */
+             color: var(--icon-color);
+             margin-top: 2px; /* Align icon better vertically */
+             flex-shrink: 0; /* Prevent icon from shrinking */
+             width: 25px; /* Fixed width for alignment */
+             text-align: center;
+        }
+         #three .contact .contact-details {
+             flex-grow: 1; /* Allow text content to take remaining space */
+         }
+        #three .contact span, #three .contact a {
+            color: var(--secondary-color); /* Muted text for details */
+            display: block; /* Ensure details are on new lines if needed */
+             font-size: 0.95rem;
+        }
+        body[data-theme="light"] #three .contact span,
+        body[data-theme="light"] #three .contact a {
+             color: #555; /* Slightly darker secondary text for light mode */
+        }
+        #three .contact a {
+            color: var(--link-color); /* Ensure email link uses link color */
+            text-decoration: none;
+        }
+        #three .contact a:hover {
+            text-decoration: underline;
+        }
+        #three .contact .icons {
+            display: flex;
+            gap: 1rem; /* Space between social icons */
+            margin-top: 0.5em;
+            padding-left: 0; /* Align with text */
+            list-style: none; /* Ensure no list styles */
+        }
+        #three .contact .icons a {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+        #three .contact .icons a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+         /* Make Font Awesome icons take space */
+         #three .contact .icons .label { display: none; }
+         #three .contact .icons a::before {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 6 Brands"; /* Check your Font Awesome version/kit */
+            font-weight: 400; /* Or 900 for solid */
+         }
+         #three .contact .icons .fa-twitter::before { content: "\f099"; }
+         #three .contact .icons .fa-facebook::before { content: "\f09a"; }
+         #three .contact .icons .fa-github::before { content: "\f09b"; }
+         #three .contact .icons .fa-instagram::before { content: "\f16d"; }
+         #three .contact .icons .fa-linkedin::before { content: "\f0e1"; }
+
+
+        /* Footer */
+        .site-footer {
+            padding: 2rem 0;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            margin-top: auto; /* Push footer to bottom */
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+        .site-footer .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .site-footer .menu li {
+             display: inline-block; /* Keep items inline */
+        }
+        .site-footer .menu a {
+            color: var(--secondary-color);
+        }
+        .site-footer .menu a:hover {
+            color: var(--link-color);
+        }
+
+        /* --------------------- */
+        /* Responsive Adjustments */
+        /* --------------------- */
+        @media (max-width: 768px) {
+             :root {
+                 --header-height: 60px; /* Optionally adjust header height for mobile */
+             }
+
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            h3 { font-size: 1.3rem; }
+
+            .container { width: 95%; }
+
+            /* --- Header & Mobile Nav --- */
+            .header-container {
+                /* Keep flex-direction: row (default) */
+                /* justify-content: space-between; already set */
+                position: relative; /* Needed for absolute positioning of nav */
+                flex-wrap: nowrap; /* Prevent wrapping of logo/actions */
+            }
+
+            .menu-toggle-button {
+                display: flex; /* Show burger button */
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                 /* Order handled by parent flex + source order */
+            }
+
+            /* Position the actions container to the far right */
+            .header-actions {
+                 margin-left: auto; /* Push actions group to the right */
+                 /* Order not needed if nav is absolute/transformed */
+            }
+
+            .main-nav {
+                /* Mobile Nav Panel Styling */
+                /* order: 4; /* No longer needed with absolute positioning */
+                position: absolute;
+                top: var(--header-height); /* Position below the header dynamically */
+                left: 0;
+                width: 100%;
+                background-color: var(--card-bg);
+                border-top: 1px solid var(--border-color);
+                box-shadow: 0 5px 10px var(--shadow-color);
+                z-index: 999; /* Below header but above content */
+
+                /* Hiding mechanism */
+                transform: translateX(-100%); /* Start off-screen to the left */
+                transition: transform 0.4s ease-in-out, visibility 0.4s; /* Smooth slide */
+                visibility: hidden; /* Hide accessibility wise when off-screen */
+
+                /* Reset desktop margin */
+                margin: 0;
+                padding: 1rem 0; /* Add padding to the panel */
+            }
+
+            .main-nav.active { /* State when menu is open */
+                transform: translateX(0); /* Slide in */
+                 visibility: visible;
+            }
+
+            /* Layout for Links inside panel */
+            .main-nav ul {
+                flex-direction: column; /* Stack nav items vertically */
+                align-items: center; /* Center items */
+                gap: 0.5rem; /* Adjust gap for vertical layout */
+                width: 100%;
+            }
+
+            .main-nav li {
+                width: 100%; /* Make list items full width */
+                text-align: center; /* Center text */
+            }
+
+            .main-nav a {
+                display: block; /* Make links take full width for easier tapping */
+                padding: 0.8rem 1rem; /* Add padding */
+                width: 100%;
+            }
+            .main-nav a::after {
+                 display: none; /* Hide underline effect on mobile nav items */
+            }
+            .main-nav a:hover,
+            .main-nav a.active {
+                 background-color: rgba(0, 123, 255, 0.1); /* Use RGB for primary color alpha */
+                 color: var(--primary-color); /* Ensure text color changes */
+            }
+             /* Ensure body[data-theme="light"] primary color is used */
+              body[data-theme="light"] .main-nav a:hover,
+              body[data-theme="light"] .main-nav a.active {
+                 background-color: rgba(0, 86, 179, 0.1); /* Darker blue alpha */
+              }
+
+            /* Adjust main content padding top if header height changes on mobile */
+             main { padding-top: var(--header-height); }
+
+            /* --- Other Sections --- */
+            #intro {
+                 min-height: calc(60vh - var(--header-height)); /* Adjust intro height */
+            }
+            #intro h1 { font-size: 2.2rem; }
+
+            #one .spotlight,
+            #one .spotlight:nth-child(even) {
+                flex-direction: column; /* Stack image and text vertically */
+                text-align: center;
+            }
+            #one .spotlight .image { margin-bottom: 1.5rem; }
+            #one .spotlight .content { flex-basis: auto; } /* Reset flex-basis */
+
+            #three .split { flex-direction: column; } /* Stack form and contact info */
+            #three .split > * { min-width: unset; } /* Remove min-width on mobile */
+
+            #three .contact li {
+                flex-direction: column; /* Stack icon and text vertically */
+                align-items: center; /* Center align items */
+                text-align: center;
+                gap: 0.5rem;
+            }
+             #three .contact .icon-contact {
+                  margin-top: 0; /* Reset top margin */
+             }
+            #three .contact .icons {
+                justify-content: center; /* Center social icons */
+            }
+        }
+
+        /* Further breakpoint for very small screens if needed */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+            #intro h1 { font-size: 2rem; }
+            #intro p { font-size: 1.1rem; }
+
+            .button {
+                 padding: 10px 20px;
+                 font-size: 0.9rem;
+            }
+
+            #two .features {
+                 grid-template-columns: 1fr; /* Single column layout */
+            }
+             #three form input[type="text"],
+             #three form input[type="email"],
+             #three form textarea {
+                 padding: 10px;
+                 font-size: 0.95rem;
+             }
+        }
